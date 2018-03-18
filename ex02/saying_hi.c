@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   saying_hi.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jafaghpo <jafaghpo@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/17 23:43:58 by jafaghpo          #+#    #+#             */
-/*   Updated: 2018/03/18 00:18:03 by jafaghpo         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <string.h>
@@ -43,7 +31,7 @@ static void parse_input(char *line)
     regex_t preg;
     int     match = 0;
     int     error = 0;
-    char    regex[15] = "^[Hh][Ii] [^Dd]";
+    char    regex[] = "^[Hh][Ii] [^Dd]";
 
     error = regcomp(&preg, regex, REG_NOSUB | REG_EXTENDED);
 	if (!error)
